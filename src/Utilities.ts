@@ -253,13 +253,13 @@ export class Utilities {
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "libused/ext-grid.component.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "libused/ext-panel.component.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "libused/ext-formpanel.component.js" )}"></script>
-    <script type="module" nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-button.component.js" )}"></script>
-    <script type="module" nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-grid.component.js" )}"></script>
-    <script type="module" nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-dataview.component.js" )}"></script>
-    <script type="module" nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-treelist.component.js" )}"></script>
-    <script type="module" nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-container.component.js" )}"></script>
-    <script type="module" nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-tabpanel.component.js" )}"></script>
-    <script type="module" nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-panel.component.js" )}"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-button.component.js" )}"    type="module"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-grid.component.js" )}"      type="module"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-dataview.component.js" )}"  type="module"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-treelist.component.js" )}"  type="module"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-container.component.js" )}" type="module"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-tabpanel.component.js" )}"  type="module"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "EWC/ext-panel.component.js" )}"     type="module"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "webcomponents/z-button.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "webcomponents/z-panel.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "webcomponents/z-p.js" )}"></script>
