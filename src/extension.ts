@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { Logger } from './Logger';
+//import { ToolbarView } from './ToolbarView';
 import { StatusBarItem } from './StatusBarItem';
 import { CreateTestFolder } from './CreateTestFolder';
 import { InstructionsEditorProvider } from './InstructionsEditorProvider';
@@ -10,6 +11,8 @@ export function activate(context: vscode.ExtensionContext) {
   Logger.channel = vscode.window.createOutputChannel("Ext JS Designer");
   context.subscriptions.push(Logger.channel);
   Logger.log('Ext JS Designer extension is now active!');
+
+  //new ToolbarView();
 
   context.subscriptions.push(StatusBarItem.register(context));
   context.subscriptions.push(CreateTestFolder.register());

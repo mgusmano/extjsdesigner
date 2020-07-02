@@ -16,6 +16,21 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+    "viewsWelcome": [
+      {
+        "view": "toolbarView",
+        "contents": "Ext JS Designer Welcome"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "toolbarView",
+          "name": "Ext JS Designer Toolbar"
+        }
+      ]
+    },
+
 		"customEditors": [
       {
         "viewType": "extjsdesigner.instructions",
