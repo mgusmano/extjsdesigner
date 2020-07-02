@@ -10,10 +10,27 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extjsdesigner.helloWorld"
+    "onLanguage:javascript",
+    "onCustomEditor:extjsdesigner.editor",
+    "*"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+    "customEditors": [
+      {
+        "viewType": "extjsdesigner.editor",
+        "displayName": "Ext JS Designer Editor",
+        "selector": [
+          {
+            "filenamePattern": "*View.js"
+          },
+          {
+            "filenamePattern": "**/app/view/Main/List.js"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
 		"commands": [
 			{
 				"command": "extjsdesigner.helloWorld",
