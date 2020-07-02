@@ -1,0 +1,19 @@
+.dataviewvbox {
+  background: rgb(38,50,56);
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.dragcomp {
+  margin:10px 10px 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  flex:1;
+  display:flex;
+  flex-direction:row;
+  color:white;
+  padding:10px;
+  background: black;
+  border:1px solid gold;
+}

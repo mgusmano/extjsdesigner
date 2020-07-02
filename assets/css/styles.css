@@ -1,0 +1,67 @@
+
+
+
+.component {
+  margin: 3px 0 0 0;
+  padding: 3px 3px 3px 3px;
+  display:flex;
+  flex-direction:row;
+  font-family: var(--vscode-font-family);
+  color: var(--vscode-activityBar-background);
+  background: var(--vscode-activityBar-foreground);
+  border:0px solid red;
+  font-size:16px;
+  width:200px;
+}
+
+.laptop {
+  border-top:25px solid lightgray;
+  border-right:5px solid lightgray;
+  border-bottom:5px solid lightgray;
+  border-left:5px solid lightgray;
+  border-radius:10px 10px 0px 0px;
+}
+
+.shadow {
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+header, footer,
+nav, article, aside {
+  border: 1px solid white;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: 0.25em;
+}
+
+
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.hbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+header, footer {
+  height: 30px;
+}
+
+.main {
+  flex: 1;
+}
+
+article {
+  flex: 5;
+}
+
+aside, nav {
+  flex: 1;
+}

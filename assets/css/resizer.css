@@ -1,0 +1,12 @@
+.resizer[data-direction="horizontal"] {
+  background-color: rgb(120, 120, 120);
+  cursor: ew-resize;
+  height: 100%;
+  width: 4px;
+}
+.resizer[data-direction="vertical"] {
+  background-color: rgb(120,120,120);
+  cursor: ns-resize;
+  height: 4px;
+  width: 100%;
+}

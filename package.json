@@ -72,8 +72,10 @@
 	},
 	"dependencies": {
 		"fs-exists-sync": "~0.1.0",
+		"rimraf": "^3.0.2",
 		"esprima": "~4.0.1",
-		"escodegen": "~1.14.3"
+		"escodegen": "~1.14.3",
+		"monaco-editor": " ^0.20.0"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.46.0",

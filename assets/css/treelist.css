@@ -1,0 +1,7 @@
+.x-treelist-item-text {
+  color: white !important;
+  margin-left: 22px;
+  margin-right: 16px;
+  line-height: 32px;
+  text-overflow: ellipsis;
+}
