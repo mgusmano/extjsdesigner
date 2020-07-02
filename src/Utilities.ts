@@ -198,49 +198,14 @@ export class Utilities {
       window.addEventListener('load', (event) => { eventListenerLoad(event, '${nonce}','${xtype}',\`${documenttext}\`) } )
       window.addEventListener('message', event => {eventListenerMessage(event, '${nonce}','${xtype}')})
     </script>
-
-    <style>
-      .overall {
-      color: var(--vscode-editor-foreground);
-      background: var(--vscode-editor-background);
-      }
-    </style>
-    <link nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/styles.css" )}" rel="stylesheet" type="text/css"></link>
-    <link nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/resizer.css" )}" rel="stylesheet" type="text/css"></link>
-    <link nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "build/ext/ext.css" )}" rel="stylesheet" type="text/css"></link>
-    <style>
-      .x-root {
-      font: 300 13px/1.25 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
-      color: white;
-      }
-      .tabpanel .x-tabbar {
-      background-color: var(--vscode-activityBar-background);
-      background-image: none;
-      border-color: #5fa2dd;
-      }
-      .tabpanel .x-tab {
-      color: #f0f0f0;
-      background: var(--vscode-activityBar-background);
-      font: 400 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
-      }
-      .tabpanel .x-tab.x-active {
-      color: #5fa2dd;
-      }
-      .tabpanel .x-tab.x-active .x-inner-el {
-      background-color: var(--vscode-editor-background);
-      background-image: none;
-      }
-      .tabpanel .x-panel-body-el {
-      background-color: var(--vscode-editor-background);
-      color: var(--vscode-editor-foreground);
-      border: 1px solid #b0b0b0;
-      font: 300 13px/1.25 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
-      }
-    </style>
-    <link nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/treelist.css" )}" rel="stylesheet" type="text/css"></link>
-    <link nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/dataview.css" )}" rel="stylesheet" type="text/css"></link>
-    <link nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/focus.css" )}" rel="stylesheet" type="text/css"></link>
-    <link nonce="${nonce}" href="${Utilities.getUriNode( webview, extensionPath, "monaco-editor/min/vs/editor/editor.main.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "build/ext/ext.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/styles.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/resizer.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/tabpanel.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/treelist.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/dataview.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/focus.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUriNode( webview, extensionPath, "monaco-editor/min/vs/editor/editor.main.css" )}" rel="stylesheet" type="text/css"></link>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/mouse.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/data.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/resizer.js" )}"></script>

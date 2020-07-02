@@ -1,0 +1,23 @@
+  .tabpanel .x-tabbar {
+  background-color: var(--vscode-activityBar-background);
+  background-image: none;
+  border-color: #5fa2dd;
+  }
+  .tabpanel .x-tab {
+  color: #f0f0f0;
+  background: var(--vscode-activityBar-background);
+  font: 400 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+  }
+  .tabpanel .x-tab.x-active {
+  color: #5fa2dd;
+  }
+  .tabpanel .x-tab.x-active .x-inner-el {
+  background-color: var(--vscode-editor-background);
+  background-image: none;
+  }
+  .tabpanel .x-panel-body-el {
+  background-color: var(--vscode-editor-background);
+  color: var(--vscode-editor-foreground);
+  border: 1px solid #b0b0b0;
+  font: 300 13px/1.25 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+  }

@@ -1,5 +1,13 @@
 
-
+      .x-root {
+        xfont-size: 8px;
+        font: 300 14px/1.25 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+        color: white;
+      }
+      .overall {
+      color: var(--vscode-editor-foreground);
+      background: var(--vscode-editor-background);
+      }
 
 .component {
   margin: 3px 0 0 0;
