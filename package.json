@@ -10,27 +10,27 @@
 		"Other"
 	],
 	"activationEvents": [
-    "onLanguage:javascript",
-    "onCustomEditor:extjsdesigner.editor",
-    "*"
+		"onLanguage:javascript",
+		"onCustomEditor:extjsdesigner.editor",
+		"*"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-    "customEditors": [
-      {
-        "viewType": "extjsdesigner.editor",
-        "displayName": "Ext JS Designer Editor",
-        "selector": [
-          {
-            "filenamePattern": "*View.js"
-          },
-          {
-            "filenamePattern": "**/app/view/Main/List.js"
-          }
-        ],
-        "priority": "default"
-      }
-    ],
+		"customEditors": [
+			{
+				"viewType": "extjsdesigner.editor",
+				"displayName": "Ext JS Designer Editor",
+				"selector": [
+					{
+						"filenamePattern": "*View.js"
+					},
+					{
+						"filenamePattern": "**/app/view/Main/List.js"
+					}
+				],
+				"priority": "default"
+			}
+		],
 		"commands": [
 			{
 				"command": "extjsdesigner.helloWorld",
@@ -45,6 +45,9 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"fs-exists-sync": "~0.1.0"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.46.0",
