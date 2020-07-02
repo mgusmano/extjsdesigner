@@ -18,7 +18,8 @@ export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
   public async resolveCustomTextEditor( document: vscode.TextDocument, webviewPanel: vscode.WebviewPanel, _token: vscode.CancellationToken ): Promise<void> {
     webviewPanel.webview.options = { enableScripts: true, enableCommandUris: true, };
     webviewPanel.webview.html = this.getHtmlForWebview( webviewPanel.webview, document );
-    setTimeout(function () {vscode.commands.executeCommand("workbench.action.webview.openDeveloperTools");}, 1000);
+    //setTimeout(function () {vscode.commands.executeCommand("workbench.action.webview.openDeveloperTools");}, 1000);
+    new MessagesFromWebviewAndVSCode(document, webviewPanel, this._context);
   }
 
   private getHtmlForWebview( webview: vscode.Webview, document: vscode.TextDocument ): string {

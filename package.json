@@ -16,32 +16,31 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-    "viewsWelcome": [
-      {
-        "view": "toolbarView",
-        "contents": "Ext JS Designer Welcome"
-      }
-    ],
-    "views": {
-      "explorer": [
-        {
-          "id": "toolbarView",
-          "name": "Ext JS Designer Toolbar"
-        }
-      ]
-    },
-
+		"viewsWelcome": [
+			{
+				"view": "toolbarView",
+				"contents": "Ext JS Designer Welcome"
+			}
+		],
+		"views": {
+			"explorer": [
+				{
+					"id": "toolbarView",
+					"name": "Ext JS Designer Toolbar"
+				}
+			]
+		},
 		"customEditors": [
-      {
-        "viewType": "extjsdesigner.instructions",
-        "displayName": "Ext JS Designer Instructions",
-        "selector": [
-          {
-            "filenamePattern": "*.mjg"
-          }
-        ],
-        "priority": "default"
-      },
+			{
+				"viewType": "extjsdesigner.instructions",
+				"displayName": "Ext JS Designer Instructions",
+				"selector": [
+					{
+						"filenamePattern": "*.mjg"
+					}
+				],
+				"priority": "default"
+			},
 			{
 				"viewType": "extjsdesigner.editor",
 				"displayName": "Ext JS Designer Editor",
@@ -72,7 +71,9 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"dependencies": {
-		"fs-exists-sync": "~0.1.0"
+		"fs-exists-sync": "~0.1.0",
+		"esprima": "~4.0.1",
+		"escodegen": "~1.14.3"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.46.0",
