@@ -17,6 +17,16 @@
 	"main": "./out/extension.js",
 	"contributes": {
 		"customEditors": [
+      {
+        "viewType": "extjsdesigner.instructions",
+        "displayName": "Ext JS Designer Instructions",
+        "selector": [
+          {
+            "filenamePattern": "*.mjg"
+          }
+        ],
+        "priority": "default"
+      },
 			{
 				"viewType": "extjsdesigner.editor",
 				"displayName": "Ext JS Designer Editor",

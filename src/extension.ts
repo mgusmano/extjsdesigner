@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { Logger } from './Logger';
 import { CreateTestFolder } from './CreateTestFolder';
+import { InstructionsEditorProvider } from './InstructionsEditorProvider';
 import { ExtJSEditorProvider } from './ExtJSEditorProvider';
 import { WelcomeDialog } from './WelcomeDialog'
 
@@ -10,6 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
   Logger.log('Ext JS Designer extension is now active!');
 
   context.subscriptions.push(CreateTestFolder.register());
+  context.subscriptions.push(InstructionsEditorProvider.register(context));
   context.subscriptions.push(ExtJSEditorProvider.register(context));
 
   WelcomeDialog.execute()

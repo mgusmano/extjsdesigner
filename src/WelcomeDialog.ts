@@ -36,6 +36,7 @@ export class WelcomeDialog {
 
   public static execute() {
     var rootPath = vscode.workspace.rootPath!
+
     if (!rootPath) {
       WelcomeDialog.showDialog()
     }
@@ -50,9 +51,9 @@ export class WelcomeDialog {
         var readmeFile = require('path').join(homePath, folderName, fileName)
         var haveReadmeFile = exists(readmeFile);
         if (haveReadmeFile) {
-          var homePath = require('os').homedir()
-          var folderName = '__ExtJS_Designer_Project'
-          var fileName = 'ClickOnThisFirst.mjg'
+          //var homePath = require('os').homedir()
+          //var folderName = '__ExtJS_Designer_Project'
+          //var fileName = 'ClickOnThisFirst.mjg'
           var readme = vscode.Uri.file(require('path').join(homePath, folderName, fileName))
           //vscode.window.showInformationMessage(readme.toString());
           setTimeout(function () {
