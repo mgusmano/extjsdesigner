@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import { Logger } from "./logger";
+import { MessagesFromWebviewAndVSCode } from "./MessagesFromWebviewAndVSCode";
 
 export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
   public _context: vscode.ExtensionContext;
