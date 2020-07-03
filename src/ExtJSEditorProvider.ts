@@ -133,7 +133,7 @@ export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
   <div class="resizer" data-direction="horizontal"></div>
 
   <!--center-->
-  <div style="display:flex;flex-direction:column;flex: 1 1 0%;">
+  <div style="display:flex;flex-direction:column;flex:1;">
     <!--toolbar-->
     <div style="flex:none;height:50px;background:${headercolor};display:flex;align-items:center;border-bottom:1px solid rgb(41,41,41);">
       <div style="flex:none;width:10px;"></div>
@@ -182,11 +182,12 @@ export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
     </div>
     <!--editors-->
     <div class="resizer" data-direction="vertical"></div>
-    <div class="tabpanel" style="flex:none;height:200px;background:darkgray;display:flex;border-bottom:1px solid rgb(41,41,41);">
+    <!--tabs-->
+    <div class="tabpanel" style="flex:none;height:250px;background:darkgray;display:flex;border-bottom:1px solid rgb(41,41,41);">
       <ext-tabpanel
         flex="1"
         shadow="true"
-        height="200px"
+        height="250px"
         width="100%"
         defaults='{"cls": "card","layout": "center"}'>
         <ext-panel title="Description"  scrollable="y" bodyPadding="0 10px 0 10px">
@@ -202,6 +203,7 @@ export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
           <ext-container id="tabevents" onReady="tabeventsReady" html="placeholder for events"></ext-container>
         </ext-panel>
       </ext-tabpanel>
+      <!--tabs-->
     </div>
   </div>
   <!--center-->
