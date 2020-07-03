@@ -32,7 +32,7 @@ To install the Ext JS Designer Extension:
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/5-designer.png" alt="download" style="float: left; margin-right: 10px;" />
 
 
-# in this Hackathon entry, the following scenarios are enabled:
+# in this Hackathon entry, the following are enabled:
 
 <ul style="font-size:18px;">
 <li>Modern Toolkit
