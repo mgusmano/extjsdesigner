@@ -4,35 +4,34 @@ This Visual Studio Code extension is an entry in the Mission: Open Architect Hac
 
 # Demo Steps
 
-The Ext JS Designer Extension is installed in the Visual Studio Extension Gallery.
+The Ext JS Designer Extension is installed from the Visual Studio Extension Gallery.
 
-To install the Ext JS Designer Extension:
+## To install the Ext JS Designer Extension:
 
 1 - make sure you have the latest version of Visual Studio Code installed.
     The installer is available here: https://code.visualstudio.com/download
 
 <br>
 2 - Once installed, start Visual Studio code, you should see the following:
-
-<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/1-empty.png" xalt="download" xstyle="float: left; margin-right: 10px;" />
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/1-empty.png"/>
 
 <br>
 3 - Install the Ext JS Designer Extension:
-<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/2-install.png" xalt="download" xstyle="float: left; margin-right: 10px;" />
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/2-install.png"/>
 
 <br>
 4 - After the extension is installed, a dialog will appear, click 'Create' button:
-<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/3-rundialog.png" xalt="download" xstyle="float: left; margin-right: 10px;" />
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/3-rundialog.png"/>
 
 <br>
 5 - After button is pressed, a sample project will be loaded:
-<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/4-clickonthisfirst.png" xalt="download" xstyle="float: left; margin-right: 10px;" />
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/4-clickonthisfirst.png"/>
 
 <br>
 6 - Click on any 'View' file:
-<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/5-designer.png" xalt="download" xstyle="float: left; margin-right: 10px;" />
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/5-designer.png"/>
 
-
+<br>
 # in this Hackathon entry, the following are enabled:
 
 <ul style="font-size:18px;">
