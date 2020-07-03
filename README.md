@@ -2,8 +2,6 @@
 
 This Visual Studio Code extension is an entry in the Mission: Open Architect Hackathon (https://www.sencha.com/mission-open-architect/)
 
-# Demo Steps
-
 The Ext JS Designer Extension is installed from the Visual Studio Extension Gallery.
 
 ## To install the Ext JS Designer Extension:
