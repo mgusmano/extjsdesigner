@@ -14,11 +14,11 @@ To install the Ext JS Designer Extension:
 2 - Once installed, start Visual Studio code, you should see the following:
 
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/1-empty.png" alt="download" style="float: left; margin-right: 10px;" />
-
+<br>
 3 - Install the Ext JS Designer Extension:
 
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/2-install.png" alt="download" style="float: left; margin-right: 10px;" />
-
+<br><br>
 4 - After the extension is installed, a dialog will appear, click 'Create' button:
 
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/3-rundialog.png" alt="download" style="float: left; margin-right: 10px;" />
@@ -27,7 +27,7 @@ To install the Ext JS Designer Extension:
 
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/4-clickonthisfirst.png" alt="download" style="float: left; margin-right: 10px;" />
 
-5 - Click on any 'View' file:
+6 - Click on any 'View' file:
 
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/5-designer.png" alt="download" style="float: left; margin-right: 10px;" />
 
