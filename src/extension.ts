@@ -14,18 +14,11 @@ export function activate(context: vscode.ExtensionContext) {
   vscode.commands.executeCommand("workbench.view.explorer")
 
   //new ToolbarView();
-
   context.subscriptions.push(StatusBarItem.register(context));
   context.subscriptions.push(CreateTestFolder.register());
   context.subscriptions.push(InstructionsEditorProvider.register(context));
   context.subscriptions.push(ExtJSEditorProvider.register(context));
 
   WelcomeDialog.execute()
-
-
-	// context.subscriptions.push(vscode.commands.registerCommand('extjsdesigner.helloWorld', () => {
-	// 	vscode.window.showInformationMessage('Hello World from extjsdesigner!');
-	// }))
-
 }
 export function deactivate() {}
