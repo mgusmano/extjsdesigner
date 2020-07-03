@@ -7,7 +7,7 @@
 	"icon": "senchaleaf.png",
 	"displayName": "extjsdesigner",
 	"description": "Sencha Ext JS Designer",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
