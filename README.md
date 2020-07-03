@@ -1,65 +1,86 @@
-# extjsdesigner README
+# Ext JS Designer README
 
-This is the README for your extension "extjsdesigner". After writing up a brief description, we recommend including the following sections.
+This Visual Studio Code extension is an entry in the Mission: Open Architect Hackathon (https://www.sencha.com/mission-open-architect/)
 
-## Features
+# Demo Steps
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The Ext JS Designer Extension is installed in the Visual Studio Extension Gallery.
 
-For example if there is an image subfolder under your extension project workspace:
+To install the Ext JS Designer Extension:
 
-\!\[feature X\]\(images/feature-x.png\)
+1 - make sure you have the latest version of Visual Studio Code installed.
+    The installer is available here: https://code.visualstudio.com/download
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+2 - Once installed, start Visual Studio code, you should see the following:
 
-## Requirements
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/1-empty.png" alt="download" style="float: left; margin-right: 10px;" />
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+3 - Install the Ext JS Designer Extension:
 
-## Extension Settings
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/2-install.png" alt="download" style="float: left; margin-right: 10px;" />
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+4 - After the extension is installed, a dialog will appear, click 'Create' button:
 
-For example:
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/3-rundialog.png" alt="download" style="float: left; margin-right: 10px;" />
 
-This extension contributes the following settings:
+5 - After button is pressed, a sample project will be loaded:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/4-clickonthisfirst.png" alt="download" style="float: left; margin-right: 10px;" />
 
-## Known Issues
+5 - Click on any 'View' file:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+<img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/5-designer.png" alt="download" style="float: left; margin-right: 10px;" />
 
-## Release Notes
 
-Users appreciate release notes as you update your extension.
+# in this Hackathon entry, the following scenarios are enabled:
 
-### 1.0.0
+<ul style="font-size:18px;">
+<li>Modern Toolkit
+<li>Views created from the 'Ext JS Designer test project'
+<li>Ext JS project files ending in View.js (like SimpleView.js)
+<li>Sencha cmd generated app view (specifically app/view/main/list.js) (see below)
+<li>Open Tooling app View Packages (see below)
+</ul>
 
-Initial release of ...
+<div style="margin-top:20px;font-size:18px;">
+Key Features implemented in the Ext JS Designer VSCode Extension:
+</div>
 
-### 1.0.1
+<ul style="font-size:18px;">
+<li>Built as VSCode Custom editor Extension
+<li>Can integrate with current Sencha VSCode Plugin
+<li>Use of AST (NO metadata!!) - see https://astexplorer.net/
+<li>Modular design (folder structure, Web Components)
+<li>Sencha ExtWebComponents and Custom Web Components for UI elements
+<li>Uses Ext JS Documentation output (DOXI) for properties, methods, events and integrated documentation
+</ul>
 
-Fixed issue #.
+<div style="margin-top:20px;font-size:18px;">
+In the Design Editor
+</div>
 
-### 1.1.0
+<ul style="font-size:18px;">
+<li>Re-arrange design and code panes
+<li>Hover over design pane to identify components
+<li>Select a component in design view to show context areas
+<li>Context editing of selected components in design pane
+<li>Visual Drag and Drop of Ext JS Components onto design pane
+<li>Property editing
+</ul>
 
-Added features X, Y, and Z.
+<div style="margin-top:20px;font-size:18px;">
+Using Sencha tools to generate a starter application
+</div>
 
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+<ul style="font-size:18px;">
+<li>Sencha cmd generated app view (specifically app/view/main/list.js)
+<ul>
+<li>sencha generate app --ext -modern moderncmd ./moderncmd
+<li>open /app/view/main/list.js
+</ul>
+<li>Open Tooling app View Packages
+<ul>
+<li>ext-gen app -a -t moderndesktop -n ModernApp
+<li>open app/desktop/src/view/personnel/Prrsonnel.js
+</ul>
+</ul>

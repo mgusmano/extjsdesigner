@@ -1,0 +1,9 @@
+vsce package patch
+vsce package --baseContentUrl none --baseImagesUrl none
+
+vsce create-publisher marc-gusmano
+
+vsce unpublish marc-gusmano.extjsdesigner
+vsce publish patch
+
+https://marketplace.visualstudio.com/manage/publishers/marc-gusmano

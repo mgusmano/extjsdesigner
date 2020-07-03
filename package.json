@@ -1,14 +1,33 @@
 {
-	"name": "extjsdesigner",
+  "name": "extjsdesigner",
+  "galleryBanner": {
+    "color": "#04364b",
+    "theme": "dark"
+  },
+  "icon": "senchaleaf.png",
 	"displayName": "extjsdesigner",
 	"description": "Sencha Ext JS Designer",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.46.0"
-	},
+  },
+  "keywords": [
+    "Sencha",
+    "Ext JS",
+    "Architect"
+  ],
+  "publisher": "marc-gusmano",
+  "author": "Marc Gusmano",
+  "license": "MIT",
+  "homepage": "https://github.com/mgusmano/extjsdesigner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgusmano/extjsdesigner"
+  },
 	"categories": [
+    "Programming Languages",
 		"Other"
-	],
+  ],
 	"activationEvents": [
 		"onLanguage:javascript",
 		"onCustomEditor:extjsdesigner.editor",
