@@ -10,11 +10,11 @@ The Ext JS Designer Extension is installed from the Visual Studio Extension Gall
     The installer is available here: https://code.visualstudio.com/download
 
 <br>
-2 - Once installed, start Visual Studio code, you should see the following:
+2 - Once installed, start Visual Studio code, you should see the following (click where indicated):
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/1-empty.png"/>
 
 <br>
-3 - Install the Ext JS Designer Extension:
+3 - Install the Ext JS Designer Extension (follow the steps in the screen shot below):
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/2-install.png"/>
 
 <br>
@@ -22,15 +22,15 @@ The Ext JS Designer Extension is installed from the Visual Studio Extension Gall
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/3-rundialog.png"/>
 
 <br>
-5 - After button is pressed, a sample project will be loaded:
+5 - After button is pressed, a sample project will be loaded: (an overview page will be displayed)
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/4-clickonthisfirst.png"/>
 
 <br>
-6 - Click on any 'View' file:
+6 - Click on any 'View' file: (a designer window will display)
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/5-designer.png"/>
 
 <br>
-# in this Hackathon entry, the following are enabled:
+# In this Sencha Hackathon entry, the following are enabled:
 
 <ul style="font-size:18px;">
 <li>Modern Toolkit
