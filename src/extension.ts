@@ -11,6 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
   Logger.channel = vscode.window.createOutputChannel("Ext JS Designer");
   context.subscriptions.push(Logger.channel);
   Logger.log('Ext JS Designer extension is now active!');
+  vscode.commands.executeCommand("workbench.view.explorer")
 
   //new ToolbarView();
 

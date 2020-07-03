@@ -16,10 +16,11 @@ export class CreateTestFolder {
       require('fs').writeFileSync(require('path').join(newFolder, 'GridView.js'), grid())
       require('fs').writeFileSync(require('path').join(newFolder, 'ClickOnThisFirst.mjg'), help())
       var folder = vscode.Uri.file(require('path').join(homePath, folderName))
-      vscode.commands.executeCommand("workbench.view.explorer").then((value) => {
+      //vscode.commands.executeCommand("workbench.view.explorer").then((value) => {
         vscode.commands.executeCommand('vscode.openFolder', folder, false);
+
       })
-    })
+    //})
 
 
   }
