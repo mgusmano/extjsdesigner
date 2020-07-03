@@ -6,7 +6,7 @@ The Ext JS Designer Extension is installed from the Visual Studio Extension Gall
 
 ## To install the Ext JS Designer Extension:
 
-1 - make sure you have the latest version of Visual Studio Code installed.
+1 - make sure you have the latest version of Visual Studio Code installed.<br>
     The installer is available here: https://code.visualstudio.com/download
 
 <br>
