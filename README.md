@@ -14,7 +14,9 @@ The Ext JS Designer Extension is installed from the Visual Studio Extension Gall
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/1-empty.png"/>
 
 <br>
-3 - Install the Ext JS Designer Extension (follow the steps in the screen shot below):
+3 - Install the Ext JS Designer Extension.<br>
+- In the 'Search Extensions in Marketplace' textbox, enter marc-gusmano<br>
+(then, follow the steps in the screen shot below):
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/2-install.png"/>
 
 <br>
