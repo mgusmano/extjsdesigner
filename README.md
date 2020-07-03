@@ -29,7 +29,8 @@ The Ext JS Designer Extension is installed from the Visual Studio Extension Gall
 6 - Click on any 'View' file: (a designer window will display)
 <img src="https://raw.githubusercontent.com/mgusmano/extjsdesigner/master/documentation/5-designer.png"/>
 
-<br>
+
+
 # In this Sencha Hackathon entry, the following are enabled:
 
 <ul style="font-size:18px;">
