@@ -3,7 +3,23 @@ var currentElementSelected;
 
 function setMouse(viewport) {
 
+    viewport.onmouseout = function (e) {
+      var elementMouseIsOver = document.elementFromPoint(
+        e.clientX,
+        e.clientY
+      );
+      var currElement = elementMouseIsOver;
+      var el = currElement.closest("#content");
+      if (el == null) {
+        if (prevElement != undefined) {
+          prevElement.classList.remove("highlight");
+        }
+      }
+    }
+
     viewport.onmousemove = function (e) {
+      //console.log('m')
+      //prevElement.classList.remove("highlight");
         if (prevElement != undefined) {
             prevElement.classList.remove("highlight");
         }
@@ -13,6 +29,7 @@ function setMouse(viewport) {
         );
         var currElement = elementMouseIsOver;
 
+        //console.log(currElement)
         while (!currElement.className.includes("x-component ")) {
             //console.dir(currElement.className)
             currElement = currElement.parentNode;

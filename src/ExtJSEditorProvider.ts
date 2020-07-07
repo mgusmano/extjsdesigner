@@ -102,38 +102,44 @@ export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
 <!--wait-->
 
 <!--main-->
-<div id="main" style="flex:1;display:none;flex-direction:row;color:white;border-top:1px solid rgb(51,51,51);border:1px solid gray;">
+<div id="main" style="flex:1;display:none;flex-direction:row;color:white;border-top:1px solid rgb(51,51,51);border:1px solid gray;" data-flex-splitter-horizontal>
   <!--left-->
-  <div id="leftpane" style="display:flex;width:300px;flex-direction:column;">
+  <div id="leftpane" style="display:flex;width:300px;flex-direction:column;" data-flex-splitter-vertical>
 
-    <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-      <div style="flex:1;"></div>
-      <div style="flex:1;">Property Editor</div>
-      <div style="flex:1;" id="classname"></div>
-      <div style="flex:1;"></div>
+    <div style="flex:auto;display:flex;flex-direction:column;border:0px solid gold;">
+      <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+        <div style="flex:1;"></div>
+        <div style="flex:1;">Property Editor</div>
+        <div style="flex:1;" id="classname"></div>
+        <div style="flex:1;"></div>
+      </div>
+
+      <div id="leftpaneprops" style="height:700px;display:flex;border:0px solid gold;overflow:auto;">
+        <z-props id="initialconfigs"></z-props>
+      </div>
     </div>
 
-    <div id="leftpaneprops" style="height:400px;display:flex;border:0px solid gold;overflow:auto;">
-      <z-props id="initialconfigs"></z-props>
-    </div>
+    <!-- <div class="resizer" line="true" data-direction="vertical"></div> -->
+    <div role="separator"></div>
 
-    <div class="resizer" line="true" data-direction="vertical"></div>
+    <div style="flex:auto;display:flex;flex-direction:column;border:0px solid gold;">
+      <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;justify-content:center;align-items:center;">
+        <div style="display:flex;">Component Tree</div>
+      </div>
 
-    <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;justify-content:center;align-items:center;">
-      <div style="display:flex;">Component Tree</div>
-    </div>
-
-    <div style="flex: 1;display:flex;border:0px solid gold;">
-      <ext-treelist fitToParent id="treelist" onReady="treeReady"></ext-treelist>
+      <div style="flex: 1;display:flex;border:0px solid gold;">
+        <ext-treelist fitToParent id="treelist" onReady="treeReady"></ext-treelist>
+      </div>
     </div>
 
   </div>
   <!--left-->
 
-  <div class="resizer" data-direction="horizontal"></div>
+  <!-- <div class="resizer" data-direction="horizontal"></div> -->
+  <div role="separator"></div>
 
   <!--center-->
-  <div style="display:flex;flex-direction:column;flex:1;">
+  <div style="display:flex;flex-direction:column;flex:1;" data-flex-splitter-vertical>
     <!--toolbar-->
     <div style="flex:none;height:50px;background:${headercolor};display:flex;align-items:center;border-bottom:1px solid rgb(41,41,41);">
       <div style="flex:none;width:10px;"></div>
@@ -161,33 +167,45 @@ export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
     </div>
     <!--toolbar-->
     <!--editors-->
-    <div id="mainparent" style="flex:1;display:flex;flex-direction:row;">
-      <div id="maindesign" style="width:50%;display:flex;flex-direction:column;xjustify-content:center;xalign-items:center;">
+    <div id="mainparent" style="flex:auto;display:flex;flex-direction:row;" data-flex-splitter-horizontal>
+
+      <div id="maindesign" style="flex:auto;width:50%;display:flex;flex-direction:column;">
         <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;justify-content:center;align-items:center;">
           <z-button id="toolbarclear" style="flex:none;margin-right:5px;" text="Clear"></z-button>
           <div style="display:flex;">Design Pane</div>
         </div>
         <div class="shadow laptop" style="flex:1;margin:20px;">
-          <div style="height:100%;width:100%;border:1px solid gray;" id="content"></div>
+          <div id="content" style="height:100%;width:100%;border:1px solid gray;"></div>
         </div>
       </div>
-      <div id="mainresizer" class="resizer" data-direction="horizontal"></div>
-      <div id="maincode" style="flex: 1 1 0%;display:flex;flex-direction:column;xjustify-content:center;xalign-items:center;border:0px solid blue;">
+
+      <!--  <div id="mainresizer" class="resizer" data-direction="horizontal"></div> -->
+      <div id="mainsplitter" role="separator"></div>
+
+      <div id="maincode" style="overflow:hidden;flex:auto;width:50%;display:flex;flex-direction:column;" xstyle="overflow:none;flex:auto;width:50%;display:flex;flex-direction:column;xjustify-content:center;xalign-items:center;border:0px solid blue;">
         <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;justify-content:center;align-items:center;">
           <z-button id="toolbareditorsave" style="flex:none;margin-right:5px;" text="Save"></z-button>
           <div style="display:flex;">Code Pane</div>
         </div>
-        <div class="shadow" id="editor" style="flex:1;margin:10px;"></div>
+        <div class="shadow" style="flex:1;margin:0;">
+          <div id="editor" style="display:flex;height:100%;width:100%;border:0px solid gray;"></div>
+        </div>
+
       </div>
+
+
     </div>
     <!--editors-->
-    <div class="resizer" data-direction="vertical"></div>
+
+    <!-- <div class="resizer" data-direction="vertical"></div> -->
+    <div role="separator"></div>
+
     <!--tabs-->
-    <div class="tabpanel" style="flex:none;height:250px;background:darkgray;display:flex;border-bottom:1px solid rgb(41,41,41);">
+    <div class="tabpanel" style="flex:auto;height:250px;background:darkgray;display:flex;border-bottom:1px solid rgb(41,41,41);">
       <ext-tabpanel
         flex="1"
         shadow="true"
-        height="250px"
+        height="100%"
         width="100%"
         defaults='{"cls": "card","layout": "center"}'>
         <ext-panel title="Description"  scrollable="y" bodyPadding="0 10px 0 10px">
@@ -208,64 +226,76 @@ export class ExtJSEditorProvider implements vscode.CustomTextEditorProvider {
   </div>
   <!--center-->
 
-  <div class="resizer" data-direction="horizontal"></div>
+  <!-- <div class="resizer" data-direction="horizontal"></div> -->
+  <div role="separator"></div>
 
   <!--right-->
-  <div id="rightpane" style="display:flex;width:250px;flex-direction:column;">
+  <div id="rightpane" style="display:flex;width:250px;flex-direction:column;" data-flex-splitter-vertical>
 
-    <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-      <div style="flex:1;"></div>
-      <div style="flex:1;">Hackathon</div>
-      <div style="flex:1;"">Quick Start</div>
-      <div style="flex:1;"></div>
+    <div style="flex:auto;display:flex;flex-direction:column;border:0px solid gold;">
+
+      <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+        <div style="flex:1;"></div>
+        <div style="flex:1;">Hackathon</div>
+        <div style="flex:1;"">Quick Start</div>
+        <div style="flex:1;"></div>
+      </div>
+
+      <div style="height:700px;display:flex;flex-direction:column;padding:10px 10px 10px 10px;overflow:auto;">
+          <div style="color:gold;">Property Editor</div>
+          Type 'title' in Filter text box<br/>
+          Edit title property and press enter</br/>
+          Design view and code view now reflect the change<br/>
+          <br/>
+          <div style="color:gold;">Hover over design pane</div>
+          red selector follows mouse<br/>
+          <br/>
+          <div style="color:gold;">Click on items in design pane</div>
+            selected item is highlighted with green<br/>
+            context window is above selected item<br/>
+            properties window refreshed<br/>
+            description is below design pane<br/>
+          <br/>
+          <div style="color:gold;">click gear icon to right of selected item</div>
+          additional context window appears<br/>
+          <br/>
+          <div style="color:gold;">click 'Clear Design Pane' in toolbar</div>
+          all context clears from design pane<br/>
+          <br/>
+          <div style="color:gold;">drag/drop from right into design pane</div>
+          control is added; code pane updated<br/>
+          <br/>
+      </div>
+
+
     </div>
 
-    <div style="height:400px;display:flex;flex-direction:column;padding:10px 10px 10px 10px;overflow:auto;">
-        <div style="color:gold;">Property Editor</div>
-        Type 'title' in Filter text box<br/>
-        Edit title property and press enter</br/>
-        Design view and code view now reflect the change<br/>
-        <br/>
-        <div style="color:gold;">Hover over design pane</div>
-        red selector follows mouse<br/>
-        <br/>
-        <div style="color:gold;">Click on items in design pane</div>
-          selected item is highlighted with green<br/>
-          context window is above selected item<br/>
-          properties window refreshed<br/>
-          description is below design pane<br/>
-        <br/>
-        <div style="color:gold;">click gear icon to right of selected item</div>
-        additional context window appears<br/>
-        <br/>
-        <div style="color:gold;">click 'Clear Design Pane' in toolbar</div>
-        all context clears from design pane<br/>
-        <br/>
-        <div style="color:gold;">drag/drop from right into design pane</div>
-        control is added; code pane updated<br/>
-        <br/>
-    </div>
+    <!-- <div class="resizer" line="true" data-direction="vertical"></div> -->
+    <div role="separator"></div>
 
-    <div class="resizer" line="true" data-direction="vertical"></div>
+    <div style="flex:auto;display:flex;flex-direction:column;border:0px solid gold;">
 
-    <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-      <div style="flex:1;"></div>
-      <div style="flex:1;">Components</div>
-      <div style="flex:1;"">Drag to Design Pane</div>
-      <div style="flex:1;"></div>
-    </div>
 
-    <div style="height:300px;display:flex;overflow:scroll;">
-      <ext-dataview
-        id="dataview"
-        cls="dataviewvbox"
-        onReady="dataviewReady"
-        itemTpl='
-        <div class="dragcomp" type="{type}" xtype="{xtype}" draggable="true">
-          <div style="width:30px;" class="fa fa-{icon}"></div>
-          <div type="{type}" style="flex:1">{xtype} ({type})</div>
-        </div>'>
-      </ext-dataview>
+      <div style="flex:none;height:50px;background:${headercolor};border-bottom:1px solid rgb(41,41,41);color:gold;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+        <div style="flex:1;"></div>
+        <div style="flex:1;">Components</div>
+        <div style="flex:1;"">Drag to Design Pane</div>
+        <div style="flex:1;"></div>
+      </div>
+
+      <div style="xheight:575px;xdisplay:flex;overflow:scroll;">
+        <ext-dataview
+          id="dataview"
+          cls="dataviewvbox"
+          onReady="dataviewReady"
+          itemTpl='
+          <div class="dragcomp" type="{type}" xtype="{xtype}" draggable="true">
+            <div style="width:30px;" class="fa fa-{icon}"></div>
+            <div type="{type}" style="flex:1">{xtype} ({type})</div>
+          </div>'>
+        </ext-dataview>
+      </div>
+
     </div>
 
   </div>

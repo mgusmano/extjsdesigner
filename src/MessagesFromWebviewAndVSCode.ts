@@ -151,7 +151,7 @@ export class MessagesFromWebviewAndVSCode {
                     this.updateTextDocument(document, message.data.code);
                     //console.log(document.getText())
                     this._eparser = new Eparser(message.data.code);
-                    vscode.window.showInformationMessage("Code Pane Saved...");
+                    //vscode.window.showInformationMessage("Code Pane Saved...");
                     break;
 
                 case "showStatusBar":

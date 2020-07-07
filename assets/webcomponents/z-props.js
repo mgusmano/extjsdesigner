@@ -286,7 +286,7 @@ class ZProps extends HTMLElement {
     return `
     <style>
     .rowparent {
-      flex:1;
+      xflex:1;
       font-size: 12px;
       padding: 3px 3px 3px 3px;
       border-bottom: 1px solid ${this.linebackground};

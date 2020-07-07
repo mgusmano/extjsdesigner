@@ -136,6 +136,7 @@ export class Utilities {
     <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/treelist.css" )}" rel="stylesheet" type="text/css"></link>
     <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/dataview.css" )}" rel="stylesheet" type="text/css"></link>
     <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/focus.css" )}" rel="stylesheet" type="text/css"></link>
+    <link   nonce="${nonce}" href="${Utilities.getUri( webview, extensionPath, "css/flex-splitter.css" )}" rel="stylesheet" type="text/css"></link>
     <link   nonce="${nonce}" href="${Utilities.getUriNode( webview, extensionPath, "monaco-editor/min/vs/editor/editor.main.css" )}" rel="stylesheet" type="text/css"></link>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/mouse.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/data.js" )}"></script>
@@ -145,6 +146,7 @@ export class Utilities {
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/treelist.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/tabpanel.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/focus.js" )}"></script>
+    <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/flex-splitter.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "scripts/allDocs.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "libused/ext-grid.component.js" )}"></script>
     <script nonce="${nonce}" src="${Utilities.getUri( webview, extensionPath, "libused/ext-panel.component.js" )}"></script>

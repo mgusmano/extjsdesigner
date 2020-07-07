@@ -92,37 +92,64 @@ function doToolbarEditorSave() {
 }
 
 function doToolbarSideBySide() {
-  document.getElementById('maindesign').style.display = "flex"
-  document.getElementById('maincode').style.display = "flex"
-  document.getElementById('mainresizer').style.display = "block"
-  document.getElementById('mainparent').style.flexDirection = 'row'
+  document.getElementById('mainsplitter').style.display = 'block'
 
   document.getElementById('maindesign').style.height = '100%'
-  document.getElementById('maindesign').style.width = '50%'
-  document.getElementById('mainresizer').setAttribute("data-direction", "horizontal")
+  document.getElementById('maindesign').style.width = "50%"
+  document.getElementById('maincode').style.height = '100%'
+  document.getElementById('maincode').style.width = "50%"
+
+  document.getElementById('maindesign').style.display = "flex"
+  document.getElementById('maincode').style.display = "flex"
+  //document.getElementById('mainresizer').style.display = "block"
+  document.getElementById('mainparent').style.flexDirection = 'row'
+
+  //document.getElementById('maindesign').style.height = '100%'
+  //document.getElementById('maindesign').style.width = '50%'
+  //document.getElementById('mainresizer').setAttribute("data-direction", "horizontal")
+
+  document.getElementById('mainparent').removeAttribute("data-flex-splitter-vertical")
+  document.getElementById('mainparent').setAttribute("data-flex-splitter-horizontal", true)
 
   document.getElementById('toolbarsidebysidebutton').setAttribute("modal", "true")
   document.getElementById('toolbartoptobottombutton').setAttribute("modal", "false")
   document.getElementById('toolbarjustdesignbutton').setAttribute("modal", "false")
   document.getElementById('toolbarjustcodebutton').setAttribute("modal", "false")
 
-  document.getElementById('editor').dispatchEvent(new CustomEvent('resizeeditor', {
-    bubbles: true,
-    cancelable: false,
-    composed: true,
-    detail: { text: window.extjsdesigner.monacoeditor.getModel().getValue()}
-  }))
+
+
+    document.getElementById('editor').dispatchEvent(new CustomEvent('resizeeditor', {
+      bubbles: true,
+      cancelable: false,
+      composed: true,
+      detail: { text: window.extjsdesigner.monacoeditor.getModel().getValue()}
+    }))
+
+
+
 }
 
 function doToolbarTopToBottom() {
+  document.getElementById('mainsplitter').style.display = 'block'
+
+  document.getElementById('maindesign').style.height = '50%'
+  document.getElementById('maindesign').style.width = "100%"
+  document.getElementById('maincode').style.height = '50%'
+  document.getElementById('maincode').style.width = "100%"
+
   document.getElementById('maindesign').style.display = "flex"
-  document.getElementById('mainresizer').style.display = "block"
+  //document.getElementById('mainresizer').style.display = "block"
   document.getElementById('maincode').style.display = "flex"
 
   document.getElementById('mainparent').style.flexDirection = 'column'
-  document.getElementById('maindesign').style.height = '50%'
-  document.getElementById('maindesign').style.width = '100%'
-  document.getElementById('mainresizer').setAttribute("data-direction", "vertical")
+  //document.getElementById('maindesign').style.height = '50%'
+  //document.getElementById('maincode').style.width = '100%'
+  //document.getElementById('mainresizer').setAttribute("data-direction", "vertical")
+
+
+  document.getElementById('mainparent').removeAttribute("data-flex-splitter-horizontal")
+  document.getElementById('mainparent').setAttribute("data-flex-splitter-vertical", true)
+
 
   document.getElementById('toolbarsidebysidebutton').setAttribute("modal", "false")
   document.getElementById('toolbartoptobottombutton').setAttribute("modal", "true")
@@ -138,8 +165,10 @@ function doToolbarTopToBottom() {
 }
 
 function doToolbarJustDesign() {
+  document.getElementById('mainsplitter').style.display = 'none'
+
   document.getElementById('maindesign').style.display = "flex"
-  document.getElementById('mainresizer').style.display = "none"
+  //document.getElementById('mainresizer').style.display = "none"
   document.getElementById('maincode').style.display = "none"
 
   document.getElementById('mainparent').style.flexDirection = 'column'
@@ -153,8 +182,10 @@ function doToolbarJustDesign() {
 }
 
 function doToolbarJustCode() {
+  document.getElementById('mainsplitter').style.display = 'none'
+
   document.getElementById('maindesign').style.display = "none"
-  document.getElementById('mainresizer').style.display = "none"
+  //document.getElementById('mainresizer').style.display = "none"
   document.getElementById('maincode').style.display = "flex"
 
   document.getElementById('mainparent').style.flexDirection = 'column'
